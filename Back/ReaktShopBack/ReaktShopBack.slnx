@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../CoreData/CoreData.csproj" />
+  <Project Path="ReaktShopBack.csproj" />
+</Solution>

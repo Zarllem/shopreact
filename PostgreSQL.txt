@@ -1,0 +1,1 @@
+dotnet ef dbcontext scaffold "Name=ShopReactData" Npgsql.EntityFrameworkCore.PostgreSQL -o Models --context "ShopReactContext" --context-dir "Contexts" --force --project "C:\Users\zzxzx\Desktop\ПГГПУ\MobilePerpeto\Shop-my\Back\CoreData\CoreData.csproj" --startup-project .
