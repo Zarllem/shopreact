@@ -300,3 +300,4 @@ C:\Users\zzxzx\Desktop\ПГГПУ\MobilePerpeto\Shop-my\Back\ReaktShopBack\bin\D
 C:\Users\zzxzx\Desktop\ПГГПУ\MobilePerpeto\Shop-my\Back\ReaktShopBack\bin\Debug\net10.0\CoreData.dll
 C:\Users\zzxzx\Desktop\ПГГПУ\MobilePerpeto\Shop-my\Back\ReaktShopBack\bin\Debug\net10.0\CoreData.pdb
 C:\Users\zzxzx\Desktop\ПГГПУ\MobilePerpeto\Shop-my\Back\ReaktShopBack\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\zzxzx\Desktop\ПГГПУ\MobilePerpeto\Shop-my\Back\ReaktShopBack\obj\Debug\net10.0\ReaktShopBack.sourcelink.json

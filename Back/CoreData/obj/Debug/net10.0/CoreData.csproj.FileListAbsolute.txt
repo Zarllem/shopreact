@@ -58,3 +58,4 @@ C:\Users\zzxzx\Desktop\ПГГПУ\MobilePerpeto\Shop-my\Back\CoreData\obj\Debug\
 C:\Users\zzxzx\Desktop\ПГГПУ\MobilePerpeto\Shop-my\Back\CoreData\obj\Debug\net10.0\CoreData.pdb
 C:\Users\zzxzx\Desktop\ПГГПУ\MobilePerpeto\Shop-my\Back\CoreData\obj\Debug\net10.0\CoreData.genruntimeconfig.cache
 C:\Users\zzxzx\Desktop\ПГГПУ\MobilePerpeto\Shop-my\Back\CoreData\obj\Debug\net10.0\ref\CoreData.dll
+C:\Users\zzxzx\Desktop\ПГГПУ\MobilePerpeto\Shop-my\Back\CoreData\obj\Debug\net10.0\CoreData.sourcelink.json
