@@ -17,6 +17,7 @@ const ProductPage = () => {
   const navigate = useNavigate();
   const [isBuy, setISBuy] = useState(false);
   const { addProduct, addCart, deleteProduct } = useCart();
+  const [openAccordion, setOpenAccordion] = useState(null);
 
   const buy = (id) => {
     if (isBuy === false) {
@@ -53,6 +54,10 @@ const ProductPage = () => {
   if (isLoad || !product) {
     return <div className="loading">Загрузка...</div>;
   }
+
+  const toggleAccordion = (name) => {
+    setOpenAccordion((prev) => (prev === name ? null : name));
+  };
 
   return (
     <div className="product-page">
@@ -119,6 +124,113 @@ const ProductPage = () => {
         >
           {!isBuy ? "В корзину" : "В корзине"} <span className="icon">🛒</span>
         </button>
+        {/* Полезная информация */}
+        <section className="product-info-section">
+          <h3 className="product-info-section__title">Полезная информация</h3>
+          <div className="product-info-section__scroll">
+            <article className="info-card">
+              <div
+                className="info-card__image"
+                style={{ backgroundImage: <img src="/images/1-кроссы.jpeg" /> }}
+              />
+              <div className="info-card__content">
+                <p className="info-card__text">Новое поступление кроссовок</p>
+              </div>
+            </article>
+
+            <article className="info-card">
+              <div className="info-card__image" />
+              <div className="info-card__content">
+                <p className="info-card__text">Как получать баллы?</p>
+              </div>
+            </article>
+
+            <article className="info-card">
+              <div className="info-card__image" />
+              <div className="info-card__content">
+                <p className="info-card__text">ТОП 5 - быстрых инвестиций</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        {/* Аккордеоны */}
+        <div className="product-accordions">
+          <div className="product-accordion">
+            <button
+              type="button"
+              className="product-accordion__header"
+              onClick={() => toggleAccordion("security")}
+            >
+              <span>Страховка и безопасность</span>
+              <span
+                className={`product-accordion__icon ${
+                  openAccordion === "security"
+                    ? "product-accordion__icon--open"
+                    : ""
+                }`}
+              >
+                ˅
+              </span>
+            </button>
+            {openAccordion === "security" && (
+              <div className="product-accordion__body">
+                Ваш заказ защищён: оплата проходит по защищённому протоколу, а
+                данные карты не передаются магазину.
+              </div>
+            )}
+          </div>
+
+          <div className="product-accordion">
+            <button
+              type="button"
+              className="product-accordion__header"
+              onClick={() => toggleAccordion("delivery")}
+            >
+              <span>Доставка</span>
+              <span
+                className={`product-accordion__icon ${
+                  openAccordion === "delivery"
+                    ? "product-accordion__icon--open"
+                    : ""
+                }`}
+              >
+                ˅
+              </span>
+            </button>
+            {openAccordion === "delivery" && (
+              <div className="product-accordion__body">
+                Доставка в течение 2–5 рабочих дней, трекинг доступен в личном
+                кабинете.
+              </div>
+            )}
+          </div>
+
+          <div className="product-accordion">
+            <button
+              type="button"
+              className="product-accordion__header"
+              onClick={() => toggleAccordion("original")}
+            >
+              <span>Строго оригинал</span>
+              <span
+                className={`product-accordion__icon ${
+                  openAccordion === "original"
+                    ? "product-accordion__icon--open"
+                    : ""
+                }`}
+              >
+                ˅
+              </span>
+            </button>
+            {openAccordion === "original" && (
+              <div className="product-accordion__body">
+                Все товары проходят проверку подлинности экспертами перед
+                отправкой.
+              </div>
+            )}
+          </div>
+        </div>
 
         <button
           onClick={() => navigate("/")}

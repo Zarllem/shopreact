@@ -30,7 +30,7 @@ builder.Services.AddCors(options =>
 
 
 var app = builder.Build();
-app.MapGet("/", () => "hello");
+//app.MapGet("/", () => "hello");
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseCors("AllowFrontend");

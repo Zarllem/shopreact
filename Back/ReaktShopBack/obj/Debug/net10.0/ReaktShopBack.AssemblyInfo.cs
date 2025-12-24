@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ReaktShopBack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50f0f4088ed3c6199b2ef491d2e86722f65b9854")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5260351eec1690f25f61ca699f3aca6480191ad5")]
 [assembly: System.Reflection.AssemblyProductAttribute("ReaktShopBack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ReaktShopBack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

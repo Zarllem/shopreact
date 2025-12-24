@@ -23,6 +23,7 @@ const CartPage = () => {
   } = useCart();
 
   const [products, setProducts] = useState([]);
+  const [showBalanceError, setShowBalanceError] = useState(false);
 
   const loadProducts = async () => {
     const ids = getAllProducts().map((p) => p.id);
@@ -66,11 +67,22 @@ const CartPage = () => {
     resetCart();
     loadProducts();
   };
+  const handleCheckout = () => {
+    if (total <= balance) {
+      _clear();
+      navigate("/order");
+      setShowBalanceError(false);
+    } else {
+      setShowBalanceError(true);
+    }
+  };
 
   const total = products.reduce(
     (acc, cur) => acc + cur.price * getCountById(cur.id),
     0
   );
+
+  const isInsufficientBalance = total > balance;
 
   return (
     <div className="cart-page">
@@ -157,13 +169,27 @@ const CartPage = () => {
         </div>
 
         {products.length > 0 && (
-          <button
-            type="button"
-            className="cart-cancel-btn"
-            onClick={() => _clear()}
-          >
-            Отменить заказ
-          </button>
+          <>
+            <button
+              type="button"
+              className={`cart-checkout-btn ${
+                isInsufficientBalance ? "insufficient-balance" : ""
+              }`}
+              onClick={handleCheckout}
+            >
+              Оформить заказ
+            </button>
+            {showBalanceError && isInsufficientBalance && (
+              <div className="balance-error">Не хватает баланса</div>
+            )}
+            <button
+              type="button"
+              className="cart-cancel-btn"
+              onClick={() => _clear()}
+            >
+              Отменить заказ
+            </button>
+          </>
         )}
         <button
           type="button"
